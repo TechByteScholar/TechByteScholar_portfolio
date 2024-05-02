@@ -36,7 +36,7 @@
 .contact-method {
   margin-bottom: 1rem;
   background: rgba(206, 205, 205, 0.8);
-  padding: 10px;
+  padding: 20px;
   border-radius: 8px;
 }
 
@@ -93,8 +93,19 @@
   .social-media-links {
     flex-direction: column;
   }
+
   .social-link {
     width: 100%;
     margin-top: 10px;
   }
+
+  .contact-method {
+    flex-direction: column; /* Stack the numbers vertically on smaller screens */
+  }
+
+  .contact-link {
+    width: 100%; /* Full width for contact links to ensure they are easy to tap */
+    margin-top: 10px; /* Consistent spacing between contact links */
+  }
 }
+
