@@ -1,0 +1,101 @@
+.achievements {
+  font-family: 'Arial', sans-serif;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 3rem 0;
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  color: white;
+}
+
+.hero-section h1 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.hero-section p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.achievement-list {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.achievement-item {
+  background: rgb(230, 226, 226);
+  border-left: 5px solid #007bff;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.achievement-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.achievement-item .year {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #007bff;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 50%;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  padding-left: 2rem;
+  border-left: 5px solid #007bff;
+  margin-top: 2rem;
+  color: #333;
+}
+
+/* Animations for loading achievements */
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 20px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.achievement-item {
+  animation: fadeInUp 0.5s ease both;
+  animation-delay: calc(0.1s * var(--animation-order));
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 1rem;
+  }
+
+  .achievement-list {
+    padding: 1rem;
+  }
+
+  .achievement-item {
+    padding: 1rem;
+  }
+
+  .achievement-item .year {
+    top: 10px;
+    left: 10px;
+  }
+
+  h2 {
+    padding-left: 1rem;
+  }
+}

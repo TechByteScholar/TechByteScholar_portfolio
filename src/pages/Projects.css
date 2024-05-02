@@ -1,0 +1,123 @@
+/* Styling for each project category container with 3D effect */
+.project-category {
+  background-color: #a7aab1;
+  border-radius: 8px;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid transparent; /* Subtle border for depth */
+  transform: perspective(1px) translateZ(0); /* Prepare for 3D hover effect */
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease, border-color 0.3s;
+}
+
+/* Base styling for the main heading of the projects-container */
+.projects-container > h1 {
+  color: #d6d6d6; /* White color for visibility */
+  font-weight: bold; /* Bold text for emphasis */
+  font-size: 3rem; /* Increased size for impact */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for 3D effect */
+  transform: translateZ(0); /* GPU acceleration for smooth animations */
+  transition: transform 0.5s ease, text-shadow 0.5s ease; /* Smooth transitions for interactions */
+}
+
+/* Interactive hover effect for the main heading */
+.projects-container > h1:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.75); /* Enhanced shadow for deeper 3D effect */
+}
+
+/* Base styling for the introductory paragraph of the projects-container */
+.projects-container > p {
+  color: #d6d6d6; /* White color for visibility */
+  font-weight: bold; /* Bold text for emphasis */
+  font-size: 1.5rem; /* Increased size for readability */
+  opacity: 0.9; /* Slightly transparent for a softer appearance */
+  transition: opacity 0.5s ease; /* Transition for dynamic interaction */
+}
+
+/* Interactive hover effect for the introductory paragraph */
+.projects-container > p:hover {
+  opacity: 1; /* Full opacity on hover for emphasis */
+}
+
+/* Optional: Add a rotating effect on the main heading to attract attention */
+@keyframes rotateAndScale {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(3deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Applying the animation to the main heading */
+.projects-container > h1 {
+  animation: rotateAndScale 5s infinite alternate ease-in-out;
+}
+
+
+.project-category h1 {
+  text-align: center;
+  
+  font-size: 1.5rem; /* Increased size for impact */
+  text-shadow: 2px 2px 10px rgba(22, 22, 22, 0.5); /* Subtle shadow for 3D effect */
+  color: #1b2733;
+}
+/* Adjust the grid layout for a cleaner 3D context */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1rem; /* Increased gap for better 3D effect visibility */
+  padding: 2rem 0;
+}
+
+/* Styling for icons to complement the 3D effect */
+.icon {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s;
+}
+
+/* Enhanced button styling for a better 3D effect */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Media query for responsive layout on smaller screens */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+}
+
+/* Specific colors for borders for each project category */
+.project-category.web { border-color: #3498db; }
+.project-category.android { border-color: #16a085; }
+.project-category.ml { border-color: #f39c12; }
+.project-category.research { border-color: #8e44ad; }
+.project-category.writing { border-color: #2980b9; }
+.project-category.freelance { border-color: #c0392b; }
+.project-category.cv { border-color: #27ae60; }
+
+/* Hover effect for a subtle lift and enhanced shadow */
+.project-category:hover {
+  transform: translateY(-10px); /* Lifts the category on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Enhances the shadow for a 3D feel */
+}

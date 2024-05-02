@@ -1,0 +1,105 @@
+/* Reset and base styles */
+html, body {
+  height: 100%; /* make sure the body takes up full viewport height */
+  margin: 0; /* reset default margin */
+  display: flex; /* establish a flex container */
+  flex-direction: column; /* stack children vertically */
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif; /* clean, modern font */
+}
+
+/* Ensure that main content fills the space */
+.main-content {
+  flex: 1; /* allows main content to expand and take up available space */
+  /* Additional styles for your main content can go here */
+}
+
+/* Sticky footer styles */
+.footer {
+  background-color: #1f2c38; /* dark shade for a professional look */
+  color: #EAEAEA; /* light gray for readability */
+  padding: 20px; /* reduced padding */
+  text-align: center; /* center content */
+  width: auto; /* full width */
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.2); /* subtle shadow for depth */
+  z-index: 100; /* ensure it stays above other content */
+}
+
+/* Footer content container */
+.footer__content {
+  margin: auto; /* center content horizontally */
+  max-width: 960px; /* limits content width for readability */
+  display: flex; /* uses flexbox for layout */
+  flex-direction: column; /* stacks items vertically */
+  align-items: center; /* center items horizontally */
+}
+
+/* Social icons container */
+.footer__socials {
+  display: flex; /* align icons in a row */
+  justify-content: center; /* center icons */
+  gap: 15px; /* even spacing between icons */
+  margin-bottom: 10px; /* space below icons */
+}
+
+/* Social icons styling */
+.footer__socials a {
+  color: #EAEAEA; /* initial icon color */
+  font-size: 24px; /* icon size */
+  transition: transform 0.3s, color 0.3s; /* smooth transition for color and scale */
+}
+
+.footer__socials a:hover, .footer__socials a:focus {
+  color: #FFC107; /* highlight color on hover/focus */
+  transform: scale(1.1); /* enlarges icon on hover/focus */
+  cursor: pointer; /* indicates clickable item */
+}
+
+/* Paragraph styles */
+.footer__content p {
+  margin: 5px 0; /* vertical spacing */
+  line-height: 1.4; /* line height */
+  font-size: 14px; /* text size */
+}
+
+/* Heart icon in footer */
+.footer__heart {
+  margin: 0 5px; /* space around heart icon */
+  color: #E74C3C; /* heart color for emphasis */
+}
+
+/* Author styling */
+.footer__author {
+  color: #FFC107; /* gold color for author's name */
+  font-weight: 500; /* medium font weight */
+  cursor: pointer; /* indicates text is clickable */
+  position: relative; /* necessary for tooltip */
+  text-decoration: none; /* removes underline */
+}
+
+.footer__author:hover, .footer__author:focus {
+  text-decoration: underline; /* underline on hover for clarity */
+}
+
+/* Tooltip for author hover */
+.footer__author::after {
+  content: "Reach out via email!"; /* tooltip text */
+  position: absolute; /* absolute positioning relative to author's name */
+  bottom: 100%; /* positions tooltip above the author's name */
+  left: 50%; /* centers the tooltip */
+  transform: translateX(-50%) translateY(-10px); /* adjusts tooltip positioning */
+  white-space: nowrap; /* prevents wrapping */
+  background-color: #333; /* dark background for contrast */
+  color: #fff; /* white text */
+  padding: 5px 10px; /* padding around text */
+  border-radius: 5px; /* rounded corners */
+  font-size: 12px; /* font size */
+  opacity: 0; /* hidden by default */
+  visibility: hidden; /* not rendered until needed */
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s; /* smooth transitions */
+}
+
+.footer__author:hover::after {
+  opacity: 1; /* visible on hover */
+  visibility: visible; /* visible on hover */
+  transform: translateX(-50%) translateY(-15px); /* slight movement to get attention */
+}

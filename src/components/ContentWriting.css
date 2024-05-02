@@ -1,0 +1,68 @@
+.content-writing-container {
+    text-align: center;
+    padding: 3rem;
+    background-color: #f5f7fa; /* Soft background for readability */
+    color: #333; /* Dark color for text */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern and clean typography */
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .content-writing-container h1 {
+    font-size: 2.8rem; /* Large font size for the main title */
+    color: #2c3e50; /* Strong color for header */
+    margin-bottom: 2rem;
+  }
+  
+  .writing-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
+    gap: 2rem; /* Space between grid items */
+    padding: 1rem;
+  }
+  
+  .writing-service {
+    background-color: #ffffff; /* White background for each service card */
+    border-radius: 8px; /* Rounded corners for cards */
+    padding: 2rem; /* Padding inside the cards */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for each card */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for hover effects */
+  }
+  
+  .writing-service:hover {
+    transform: translateY(-10px); /* Slight upward lift when hovered */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover for a "lifting" effect */
+  }
+  
+  .writing-service h2 {
+    color: #007bff; /* Blue color for titles */
+    margin-bottom: 1rem;
+  }
+  
+  .btn {
+    background-color: #007bff; /* Blue color for buttons */
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px; /* Rounded edges for buttons */
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    display: inline-block; /* Allows for margin and padding */
+  }
+  
+  .btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Button grows slightly on hover */
+    text-decoration: none; /* Ensures no underline appears */
+  }
+  
+  @media (max-width: 768px) {
+    .writing-services-grid {
+      grid-template-columns: 1fr; /* Stack the cards on small screens */
+    }
+  }
+  

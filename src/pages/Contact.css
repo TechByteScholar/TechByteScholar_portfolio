@@ -1,0 +1,100 @@
+/* Base container styling */
+.contact-container {
+  text-align: center;
+  padding: 3rem;
+  max-width: 800px;
+  margin: 40px auto;
+  background: linear-gradient(135deg, #23313f 0%, #23313f 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  color: #333;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Header styling for emphasis and elegance */
+.contact-container h1 {
+  font-size: 3rem;
+  color: rgb(211, 208, 208);
+  margin-bottom: 1rem;
+}
+
+.contact-container h3 {
+  font-size: 1.5rem;
+  color: rgb(53, 51, 51);
+  margin-bottom: 1rem;
+}
+
+/* Paragraph styling for readability */
+.contact-container > p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #d4d4d4;
+  margin-bottom: 1.5rem;
+}
+
+/* Individual contact method blocks */
+.contact-method {
+  margin-bottom: 1rem;
+  background: rgba(206, 205, 205, 0.8);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Styling links to be more engaging and spaced out */
+.contact-link, .social-link {
+  color: #3498db;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  background: #f0f0f0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  margin-right: 20px; /* Adds a right margin to all links except last child */
+}
+
+.contact-link:last-child {
+  margin-right: 0; /* Removes margin from the last link to maintain alignment */
+}
+
+/* Enhanced hover effects for links */
+.contact-link:hover, .social-link:hover {
+  background-color: #3498db;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Flexbox for social media links */
+.social-media-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Individual social link styling */
+.social-link {
+  padding: 0.75rem 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Scale and shadow hover effects for social links */
+.social-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Color theming for social media platform on hover */
+.social-link.linkedin:hover { background-color: #285280; }
+.social-link.facebook:hover { background-color: #3b5998; }
+.social-link.instagram:hover { background-color: #bc2a8d; }
+.social-link.twitter:hover { background-color: #00aced; }
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .social-media-links {
+    flex-direction: column;
+  }
+  .social-link {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

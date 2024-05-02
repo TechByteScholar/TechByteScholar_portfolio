@@ -1,0 +1,212 @@
+@keyframes zoomInOut {
+  0%, 100% {
+    transform: scale(1); /* Original size */
+  }
+  50% {
+    transform: scale(1.1); /* Zoom in (10% larger) */
+  }
+}
+
+.btn-primary {
+  animation: zoomInOut 2s infinite; /* Apply the animation */
+  transition: transform 0.3s ease; /* Smooth transition for any other transform changes */
+}
+
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+/* Apply a smooth scrolling effect */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Home container styles */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Hero section with dynamic background and typography */
+.hero {
+  padding: 6rem 1rem;
+  background: linear-gradient(120deg, #23313f 0%, #263646 100%);
+  color: #e7e5e5;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+/* Styling for the intro section heading */
+.intro > h1 {
+  color: #e6e5e5; /* White color for visibility */
+  font-weight: bold; /* Bold text for emphasis */
+  font-size: 2rem; /* Increased size for impact */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for 3D effect */
+  transform: translateZ(0); /* GPU acceleration for smooth animations */
+  transition: transform 0.5s ease, text-shadow 0.5s ease; /* Smooth transitions for interactions */
+}
+
+/* Styling for the paragraphs in the intro section */
+.intro > p {
+  color: #e6e5e5; /* White color for visibility */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem; /* Increased size for readability */
+}
+
+
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  animation: fadeIn 2s ease-out forwards;
+}
+
+/* Subtle animations for text */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Button styles with hover effect */
+.btn {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #0056b3;
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 5px 15px rgba(0, 86, 179, 0.4);
+  position: relative; /* Ensure it's positioned relative for z-index */
+  z-index: 1; /* Set an initial z-index */
+}
+
+.btn.btn-primary {
+  background-color: transparent;
+  color: #eee6e6;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: goldenrod;
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 20px rgba(0, 86, 179, 0.5);
+  z-index: 10; /* Higher z-index on hover to ensure it's above other elements */
+}
+
+/* Intro and Projects sections with clean and fresh look */
+.intro, .home-projects {
+  padding: 3rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 2rem auto;
+  background-color: #293a4b;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.intro h1, .home-projects h1 {
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+/* Hover effect for sections */
+.intro:hover, .home-projects:hover {
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+
+  .intro, .home-projects {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 0;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p, .btn {
+    font-size: 1rem;
+  }
+
+  .intro, .home-projects {
+    padding: 1.5
+rem;
+}
+}
+
+@media (max-width: 480px) {
+.hero h1 {
+font-size: 2rem;
+}
+
+.hero p {
+font-size: 0.9rem;
+}
+
+.intro, .home-projects {
+padding: 1rem;
+}
+
+.btn {
+padding: 8px 20px;
+font-size: 0.9rem;
+}
+}

@@ -1,0 +1,75 @@
+[
+  {
+    "category": "web",
+    "name": "Project One",
+    "description": "This is a web development project.",
+    "githubLink": "https://github.com/yourusername/project-one"
+  },
+  {
+    "category": "android",
+    "name": "Project 1",
+    "description": "Hexa Town Task",
+    "githubLink": "https://github.com/saqibnaeem-appdev/HexaTown_Task"
+  },
+  {
+    "category": "android",
+    "name": "Project 2",
+    "description": "Ztep App",
+    "githubLink": "https://github.com/saqibnaeem-appdev/Ztep_App"
+  },
+  {
+    "category": "android",
+    "name": "Project 3",
+    "description": "Dicover Luxembourg",
+    "githubLink": "https://github.com/saqibnaeem-appdev/DicoverLuxembourg"
+  },
+  {
+    "category": "android",
+    "name": "Project 4",
+    "description": "Game App",
+    "githubLink": "https://github.com/saqibnaeem-appdev/Game_App"
+  },
+  {
+    "category": "android",
+    "name": "Project 5",
+    "description": "Music Player",
+    "githubLink": "https://github.com/saqibnaeem-appdev/Music-Player"
+  },
+  {
+    "category": "android",
+    "name": "Project 6",
+    "description": "Audio Video Calling App",
+    "githubLink": "https://github.com/saqibnaeem-appdev/AudioVideoCalling_App"
+  },
+  {
+    "category": "android",
+    "name": "Project 7",
+    "description": "Student Learning App",
+    "githubLink": "https://github.com/saqibnaeem-appdev/StudentLearningApp"
+  },
+  {
+    "category": "android",
+    "name": "Project 8",
+    "description": "Blood Connection App",
+    "githubLink": "https://github.com/saqibnaeem-appdev/BloodConnectionApp"
+  },
+  {
+    "category": "android",
+    "name": "Project 9",
+    "description": "Note App",
+    "githubLink": "https://github.com/saqibnaeem-appdev/NoteApp"
+  },
+
+  {
+    "category": "machine-learning",
+    "name": "Project Fifteen",
+    "description": "A deep learning project for object detection.",
+    "githubLink": "https://github.com/yourusername/project-fifteen"
+  },
+  {
+    "category": "research",
+    "name": "Project Eighteen",
+    "description": "A study on the impact of social media on mental health.",
+    "githubLink": "https://github.com/yourusername/project-eighteen"
+  }
+]
